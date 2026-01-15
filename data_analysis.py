@@ -1,6 +1,7 @@
 # Noah Robinson
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Read the csv file into a variable 
 df = pd.read_csv("best_selling_albums.csv")
@@ -20,4 +21,12 @@ print()
 print(largest_sales)
 
 # Display smallest sales number
-print(sales.min())
+# print(sales.min())
+
+# Plot album and genre
+
+plt.plot(df["Album"], df["Genre"])
+plt.xlabel("Top Selling Albums")
+plt.ylabel("Genres")
+plt.title("Top Selling Albums and their Genres")
+plt.show()
